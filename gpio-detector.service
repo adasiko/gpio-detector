@@ -1,0 +1,9 @@
+[Unit]
+Description=Gpio rise detector
+
+[Service]
+ExecStart=/opt/gpio-detector /dev/gpiochip1 6 /var/gpio_time_mark
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
